@@ -36,7 +36,7 @@ class Calc:
         self.history.append(self.opt)
 
     def addition(self):
-        """"""
+        self.ans = self.var2 + self.var1
 
     def subtraction(self):
         """"""
