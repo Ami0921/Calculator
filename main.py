@@ -35,5 +35,34 @@ class Calc:
         self.opt = input("Enter Operation : ")
         self.history.append(self.opt)
 
+    def addition(self):
+        """"""
+
+    def subtraction(self):
+        """"""
+
+    def multiplication(self):
+        """"""
+
+    def division(self):
+        """"""
+
+    def check_operation(self):
+        if self.opt.lower() in ['add', '+', 'addition']:
+            self.addition()
+
+        elif self.opt.lower() in ['sub', '-', 'subtraction']:
+            self.subtraction()
+
+        elif self.opt.lower() in ['multi', '*', 'multiplication']:
+            self.multiplication()
+
+        elif self.opt.lower() in ['div', '/', 'division']:
+            self.division()
+
+        else:
+            raise ValueError(f"Please Enter Valid Operation ({self.opt})")
+
+
 calc = Calc()
 calc.main()
