@@ -14,6 +14,8 @@ class Calc:
               "For Division type Div\n"
               "For Break the Calculation type N")
         self.var1 = self.get_number()
+
+        # get values until user press n or no
         while True:
             self.get_operation()
             if self.opt.lower() in ['n', 'no']:
