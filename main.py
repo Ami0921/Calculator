@@ -21,6 +21,9 @@ class Calc:
             if self.opt.lower() in ['n', 'no']:
                 break
             self.var2 = self.get_number()
+            self.check_operation()
+            self.print_answer()
+            self.var1 = self.ans
 
     def get_number(self):
         number = input("Enter Value : ")
@@ -36,16 +39,20 @@ class Calc:
         self.history.append(self.opt)
 
     def addition(self):
-        """"""
+        self.ans = self.var1 + self.var2
 
     def subtraction(self):
-        """"""
+        self.ans = self.var1 - self.var2
 
     def multiplication(self):
-        """"""
+        self.ans = self.var1 * self.var2
 
     def division(self):
-        """"""
+        self.ans = self.var1 / self.var2
+
+    def print_answer(self):
+        print(" ".join(self.history))
+        print(self.ans)
 
     def check_operation(self):
         if self.opt.lower() in ['add', '+', 'addition']:
